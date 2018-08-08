@@ -1,4 +1,4 @@
-Package: Rcompadre
+Package: RcompadreDev
 Type: Package
 Title: Utilities for working with the COMPADRE/COMADRE Database
 Version: 0.1.0
@@ -17,3 +17,19 @@ Imports:
 Suggests: knitr, rmarkdown,
     testthat
 VignetteBuilder: knitr
+Collate: 
+    'CompadreData.R'
+    'CompadreM.R'
+    'checkspecies.R'
+    'cleanDatabase.R'
+    'collapseMatrix.R'
+    'convert2flat.R'
+    'data.R'
+    'dbCompare.R'
+    'getMeanMatF.R'
+    'identifyReprodStages.R'
+    'mergeDBs.R'
+    'rearrangeMatrix.R'
+    'splitMatrix.R'
+    'stringtomatrix.R'
+    'subsetDB.R'
