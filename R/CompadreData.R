@@ -74,3 +74,29 @@ asCompadreData <- function(from) {
         }),
         version = from$version)
 }
+
+################################################################################
+#' Methods for 'CompadreData' class
+#' 
+#' Below are methods for the CompadreData class. These are mostly focused 
+#' on extraction of relevant data. Each method includes a 'generic' 
+#' function with the implemented through that generic.
+#' 
+#' @name CompadreDataMethods
+
+# matA
+#' @rdname CompadreDataMethods
+#' @export
+setGeneric("matA", 
+               function(object){
+                   standardGeneric("matA")
+               }
+)
+#' @rdname CompadreDataMethods
+#' @export
+setMethod("matA", signature = (object = "CompadreData"), 
+          function(object){
+              matAlist <- lapply(object$mat, matA)
+              return(matAlist)
+          }
+)

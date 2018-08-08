@@ -159,3 +159,29 @@ setMethod("show", signature = (object ="CompadreM"),
             cat("\n")
           }
 )
+
+
+################################################################################
+#' Methods for 'CompadreM' class
+#' 
+#' Below are methods for the CompadreM class. These are mostly focused 
+#' on extraction of relevant data. Each method includes a 'generic' 
+#' function with the implemented through that generic.
+#' 
+#' @name CompadreMMethods
+
+# matA
+#' @rdname CompadreMMethods
+#' @export
+setGeneric("matA", 
+               function(object){
+                   standardGeneric("matA")
+               }
+)
+#' @rdname CompadreMMethods
+#' @export
+setMethod("matA", signature = (object = "CompadreM"), 
+          function(object){
+              return(object@matA)
+          }
+)
